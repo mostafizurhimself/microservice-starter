@@ -9,7 +9,7 @@ const rules = [
   body('content')
     .optional({ checkFalsy: true, nullable: true })
     .isLength({ min: 5, max: 500 })
-    .withMessage('Post content should be 5 to 500 character.')
+    .withMessage('Post content should be 5 to 500 character.'),
 ];
 
 export const postCreateRules = [
@@ -17,15 +17,13 @@ export const postCreateRules = [
     .notEmpty()
     .bail()
     .custom(async (value) => {
-      const repository = Container.get(
-        PostRepository
-      ) as Repository<PostDocument>;
+      const repository = Container.get(PostRepository) as Repository<PostDocument>;
       const post = await repository.findOne({ title: value });
       if (post) {
         return Promise.reject('This title has already taken.');
       }
     }),
-  ...rules
+  ...rules,
 ];
 
 export const postUpdateRules = [
@@ -39,13 +37,11 @@ export const postUpdateRules = [
     .notEmpty()
     .bail()
     .custom(async (value, { req }) => {
-      const repository = Container.get(
-        PostRepository
-      ) as Repository<PostDocument>;
+      const repository = Container.get(PostRepository) as Repository<PostDocument>;
       if (req.params && req.params.id) {
         const post = await repository.findOne({
           _id: { $ne: req.params.id },
-          title: value
+          title: value,
         });
         if (post) {
           return Promise.reject('This title has already taken.');
@@ -55,8 +51,8 @@ export const postUpdateRules = [
 
   body('content', 'Post content should be 5 to 500 character.').isLength({
     min: 5,
-    max: 100
-  })
+    max: 100,
+  }),
 ];
 
 export const postParamRules = [
@@ -64,5 +60,5 @@ export const postParamRules = [
     .exists()
     .custom((value) => {
       return Types.ObjectId.isValid(value);
-    })
+    }),
 ];

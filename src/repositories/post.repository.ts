@@ -9,11 +9,7 @@ export default class PostRepository implements Repository<PostDocument> {
     return await Post.find(criteria);
   }
 
-  async paginate(
-    criteria?: Criteria,
-    currentPage?: number,
-    perPage?: number
-  ): Promise<PaginatedResult<PostDocument>> {
+  async paginate(criteria?: Criteria, currentPage?: number, perPage?: number): Promise<PaginatedResult<PostDocument>> {
     return await Post.paginate(criteria, currentPage, perPage);
   }
 
@@ -31,7 +27,7 @@ export default class PostRepository implements Repository<PostDocument> {
 
   async update(criteria: Criteria, body: PostRequest): Promise<PostDocument> {
     return (await Post.findOneAndUpdate(criteria, body, {
-      new: true
+      new: true,
     })) as PostDocument;
   }
 

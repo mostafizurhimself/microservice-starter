@@ -17,11 +17,7 @@ export interface PostDocument extends PostRequest, mongoose.Document {
 }
 
 export interface PostModel extends Model<PostDocument> {
-  paginate(
-    criteria?: Criteria,
-    currentPage?: number,
-    perPage?: number
-  ): Promise<any>;
+  paginate(criteria?: Criteria, currentPage?: number, perPage?: number): Promise<any>;
   factory: (amount?: number) => PostFactory;
 }
 
@@ -29,7 +25,7 @@ const PostSchema = new Schema<PostDocument>(
   {
     title: { type: String, required: true },
     slug: { type: String, slug: 'title' },
-    content: { type: String, required: true }
+    content: { type: String, required: true },
   },
   { timestamps: true, toJSON: { virtuals: true } }
 );
@@ -59,8 +55,8 @@ PostSchema.statics.paginate = async function (
       totalPage: Math.ceil(count / perPage),
       current: currentPage,
       totalItem: count,
-      perPage: perPage
-    }
+      perPage: perPage,
+    },
   };
 };
 

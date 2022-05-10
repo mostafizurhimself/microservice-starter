@@ -8,7 +8,7 @@ export default class PostFactory extends BaseFactory<PostDocument> {
   protected definition() {
     return {
       title: faker.lorem.sentence(),
-      content: faker.lorem.paragraph()
+      content: faker.lorem.paragraph(),
     } as PostRequest;
   }
 }

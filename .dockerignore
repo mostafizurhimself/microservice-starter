@@ -4,3 +4,5 @@ Dockerfile
 .git
 .gitignore
 docker-compose-*
+npm-debug.log
+yarn-error.log

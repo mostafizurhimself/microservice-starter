@@ -7,11 +7,7 @@ import Container, { Service } from 'typedi';
 @Service()
 @Middleware({ type: 'before' })
 export class ResolveTenant implements ExpressMiddlewareInterface {
-  async use(
-    request: Request,
-    response: Response,
-    next: NextFunction
-  ): Promise<void> {
+  async use(request: Request, response: Response, next: NextFunction): Promise<void> {
     // Skip database connection on test environment
     if (process.env.NODE_ENV == 'test') {
       return next();

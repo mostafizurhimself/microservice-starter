@@ -2,23 +2,9 @@ import { PostDocument } from '@/database/models/post.model';
 import validate from '@/middleware/validation.middleware';
 import PostRepository from '@/repositories/post.repository';
 import { ApiResponse, PaginatedResult, PaginatedQuery } from '@/types';
-import {
-  postCreateRules,
-  postUpdateRules,
-  postParamRules
-} from '@/validators/post.validator';
+import { postCreateRules, postUpdateRules, postParamRules } from '@/validators/post.validator';
 import { Request, Response } from 'express';
-import {
-  Controller,
-  Get,
-  Post,
-  Req,
-  Res,
-  UseBefore,
-  Param,
-  Put,
-  Delete
-} from 'routing-controllers';
+import { Controller, Get, Post, Req, Res, UseBefore, Param, Put, Delete } from 'routing-controllers';
 import { Inject, Service } from 'typedi';
 
 @Service()
@@ -29,12 +15,7 @@ export class PostController {
   @Get('/posts')
   async index(
     @Req()
-    req: Request<
-      Record<string, unknown>,
-      Record<string, unknown>,
-      Record<string, unknown>,
-      PaginatedQuery
-    >,
+      req: Request<Record<string, unknown>, Record<string, unknown>, Record<string, unknown>, PaginatedQuery>,
     @Res() res: Response<ApiResponse>
   ) {
     if (req.query.withoutPagination) {
@@ -55,17 +36,13 @@ export class PostController {
     const post = await this.repository.save(req.body);
     return res.json({
       message: 'Post created successfully.',
-      data: post
+      data: post,
     });
   }
 
   @Get('/posts/:id')
   @UseBefore(validate(postParamRules))
-  async show(
-    @Param('id') id: string,
-    @Req() req: Request,
-    @Res() res: Response<ApiResponse>
-  ) {
+  async show(@Param('id') id: string, @Req() req: Request, @Res() res: Response<ApiResponse>) {
     const post = await this.repository.findById(id);
     if (post) {
       return res.json({ message: 'Post found.', data: post });
@@ -75,16 +52,12 @@ export class PostController {
 
   @Put('/posts/:id')
   @UseBefore(validate(postUpdateRules))
-  async update(
-    @Param('id') id: string,
-    @Req() req: Request,
-    @Res() res: Response<ApiResponse>
-  ) {
+  async update(@Param('id') id: string, @Req() req: Request, @Res() res: Response<ApiResponse>) {
     const post = await this.repository.update({ _id: id }, req.body);
     if (post) {
       return res.json({
         message: 'Post updated successfully.',
-        data: post
+        data: post,
       });
     }
     return res.status(404).json({ message: 'No resource found.' });
@@ -92,11 +65,7 @@ export class PostController {
 
   @Delete('/posts/:id')
   @UseBefore(validate(postParamRules))
-  async delete(
-    @Param('id') id: string,
-    @Req() req: Request,
-    @Res() res: Response<ApiResponse>
-  ) {
+  async delete(@Param('id') id: string, @Req() req: Request, @Res() res: Response<ApiResponse>) {
     const post = await this.repository.delete(id);
     if (post) {
       return res.json({ message: 'Post deleted successfully.' });
