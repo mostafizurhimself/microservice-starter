@@ -31,7 +31,7 @@
     "morgan": "^1.10.0",
     "reflect-metadata": "^0.1.13",
     "routing-controllers": "^0.9.0",
-    "tsconfig-paths": "^3.12.0",
+    "tsconfig-paths": "^4.0.0",
     "typedi": "^0.10.0",
     "winston": "^3.3.3"
   },
