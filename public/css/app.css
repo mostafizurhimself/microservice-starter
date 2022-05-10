@@ -1,0 +1,4 @@
+@import url('https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css');
+#pong {
+  font-family: Arial, Helvetica, sans-serif;
+}

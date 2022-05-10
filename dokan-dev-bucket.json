@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "dokan-dev",
+  "private_key_id": "3629aef902cb9f0b29adaaf2629a3d2e17f9708c",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDCK99WZe19Qsad\n+w1wf5ZfOLMFwQ/EPqQFIl970jvMQkCd5k6VU/AK89qBky0+MJVcwclyJWdVyPy3\nQCYV1okSXQ4/4agIUuchLLACloIodcM6rg5bQH02eg7nef6m8MutnLyQuGyEF6HV\nbNG/puFuZneL0Dg/IbnRDtOS4QHoASQgZhh/msoud2PcCitE0OrnOVIsVXbqC10U\nAK4fbjNE4IzYyeohwxxaWSooHopr/w6EDAXPSD/U2IoREU5bVRLWfpcdpeSw6I/H\nR1IQEbCYO26lD4Gx5tq+QMFrfySafixYEhLmX6FwKG7h+5Vvmi8/hhzR6rPK0aFh\n6SnewAifAgMBAAECggEAL2uyjDGxef2Eb1HAWwC180RwKFAZryZTPXPDGQTjmMN3\nb3ivKXYJ8krSywFsM7t+xtwG/CsZXRCMc56ljoDKEiOK1twgAwRoMShuRfuHByWX\ni+21UODjk5nkqPCY2iGFxL06Kif4TJxO6EY+xY0WkjVRLeKo0fZFIML7tevg4M10\nyUfsqLfceemqvCkJN2YFhTWhMM0s/YWuCaFqwlzONG/AZttCb2Vxj+PWPtQVD19q\neyqrhYaXGs6vbGgp0cC7ea7CstGKNG1XYS97tgDozXfyx2LLzL0dVBz8OLGEYN8j\nDh9XimNLGlSv0M1q8CgZSVEnU2UtmSg2z3WA7RQMfQKBgQD8sHq92PVz6XdNdpvY\nzKO7DQ0U5L1np7eOC5pLaPws00kws+qqQYWwOc7nwEVyYU9BA5Ize3QCvj5gE5qG\n0EzdUX7KVxwngAROa1RzFkwvfoW0TfS1odlE0a4/oWlSMaTShbfbktuUp6xjYKeD\nsG09A7Ie12y94V9nUNpPDq+IdQKBgQDEtx+d+j+wVpN1Xcf/Tpxp+wXrC4ddW2l6\n9fN1eEH8DzWzOXA8KagZLqoywJy9jbbNfAsALC1JMqDABF09mY/vTAn9hHwksSKC\nTe6Fq6sd0QbfPgITHBceBpMHimIhaotQms4eH4taAKspkzTeQmC8wecow1Ox+lbi\nfnSU5DfKQwKBgQCzkv9HV53nh+zewgGzKorY7Ud0p7HqrggGDDzUhoFfoa+LyvBj\nmjjVqd9eVweDZ6AZBd6qc3tYT7aoNIZGdFWLmtTOGuXJNHLa/+998kSmI/YE0rmr\nMp/jBlgcpCri3KDTc2/bvRwLIrWh0hh5v7GCANRekp2Wu0k/dPgP4tHf2QKBgG0u\nDhhKSor+oj0j3drvsJSJxFEeRvUjxTl/xK5QHp9debqNiKN7o1bGtaQRj20NeIY3\n8IsZ+dCEjv/D7FRCJMb19x2EKLrcrYCQ7G+4RfL4js3cxp4AmzwI/hXTUn+leMk2\nAmxpqZg8gsNCdrddM//PxxKyxoMjpJF1ChORTv2tAoGAcCLdY9HRP0iPa0zn1AKB\nKdXkIBbCEzMx4PqMHQs6YUXq8eZzIR0QMAOMQIU3SZ+CKtpIhY/BuyTiwRvkybzG\n4qvj7hGBm1d2oEnER5NIcsW7MK8CCd27kBqN8/HFPQyt4G+vOswulRcexbS95c8w\nHlkXF5qgSexM27P+4c54aoM=\n-----END PRIVATE KEY-----\n",
+  "client_email": "dokan-dev-bucket@dokan-dev.iam.gserviceaccount.com",
+  "client_id": "114531008106454229313",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/dokan-dev-bucket%40dokan-dev.iam.gserviceaccount.com"
+}
