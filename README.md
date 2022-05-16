@@ -18,6 +18,12 @@ Then, install the dependencies:
 npm install
 ```
 
+Copy the `.env.example` file to `.env` and change the values to your own.
+
+```bash
+cp .env.example .env
+```
+
 Then, run the application:
 
 ```bash
