@@ -12,7 +12,7 @@
     "start": "TS_NODE_BASEURL=./dist node -r tsconfig-paths/register dist/index.js",
     "fmt": "prettier --config .prettierrc 'src/**/*.ts' --write",
     "lint": "yarn run eslint --ext .ts src/",
-    "postinstall": "cp .env.example .env"
+    "postinstall": "cp -n .env.example .env || true"
   },
   "dependencies": {
     "@faker-js/faker": "^6.2.0",
