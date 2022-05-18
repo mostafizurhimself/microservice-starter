@@ -13,6 +13,7 @@
     "fmt": "prettier --config .prettierrc 'src/**/*.ts' --write",
     "lint": "yarn run eslint --ext .ts src/",
     "postinstall": "cp -n .env.example .env || true"
+    "route:list": "ts-node-dev --respawn --transpile-only -r tsconfig-paths/register src/bin/route-list.ts"
   },
   "dependencies": {
     "@faker-js/faker": "^6.2.0",
