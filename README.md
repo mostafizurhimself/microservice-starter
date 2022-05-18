@@ -15,14 +15,11 @@ git clone https://github.com/MdMostaFizurRahaman/microservice-starter.git
 Then, install the dependencies:
 
 ```bash
-npm install
+npm install | yarn install
 ```
 
-Copy the `.env.example` file to `.env` and change the values to your own.
+`.env.example` file will be copied to `.env` automatically for the first time npm/yarn install command is run
 
-```bash
-cp .env.example .env
-```
 
 Then, run the application:
 
