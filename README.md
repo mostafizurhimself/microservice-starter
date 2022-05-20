@@ -6,20 +6,35 @@
 
 ### Getting Started
 
-Run this following command to clone the repository:
+First, clone the repository:
 
-```
+```bash
 git clone https://github.com/MdMostaFizurRahaman/microservice-starter.git
 ```
 
-Then, run the following command to install all the dependencies:
+Then, install the dependencies:
+
+```bash
+npm install | yarn install
+```
+
+`.env.example` file will be copied to `.env` automatically for the first time npm/yarn install command is run
+
+Next, change these `.env` file values with your own values.
 
 ```
-npm install
+Database configuration
+DB_NAME=microservice-starter
+DB_HOST=localhost
+DB_PORT=27017
+DB_USER=root
+DB_PASSWORD=password
 ```
 
-To run the application, run the following command:
+Then, run the server:
 
-```
+```bash
 npm run dev
 ```
+
+Application will be running on http://localhost:3000
