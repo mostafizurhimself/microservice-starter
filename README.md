@@ -22,8 +22,7 @@ npm install | yarn install
 
 Next, change these `.env` file values with your own values.
 
-```
-Database configuration
+```bash
 DB_NAME=microservice-starter
 DB_HOST=localhost
 DB_PORT=27017
