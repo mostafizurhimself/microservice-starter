@@ -13,18 +13,9 @@ export class ResolveTenant implements ExpressMiddlewareInterface {
       return next();
     }
 
-    const tenant = request.get('tenant') || request.subdomains[0];
+    // MongoDB connection url
+    const dsn = `mongodb://${process.env.DB_USER}:${process.env.DB_PASSWORD}@${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_NAME}`;
 
-    if (!tenant) {
-      throw new Error('Tenant could not be resolved.');
-    }
-
-    let dsn = '';
-    if (process.env.DB_USER) {
-      dsn = `mongodb://${process.env.DB_USER}:${process.env.DB_PASSWORD}@${process.env.DB_HOST}:${process.env.DB_PORT}/${tenant}`;
-    } else {
-      dsn = `mongodb://${process.env.DB_HOST}:${process.env.DB_PORT}/${tenant}`;
-    }
     // Connect Database
     try {
       // Connect to MongoDB. Example DSN: mongodb://username:password@localhost:27017/my_collection
@@ -35,10 +26,6 @@ export class ResolveTenant implements ExpressMiddlewareInterface {
       logger.error('Could not connect to db');
       process.exit(1);
     }
-
-    request.headers['tenant'] = tenant;
-    Container.set('tenant', tenant);
-    Container.set('request', request);
 
     next();
   }
