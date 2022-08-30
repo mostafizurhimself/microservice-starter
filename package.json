@@ -16,7 +16,7 @@
     "route:list": "ts-node-dev --respawn --transpile-only -r tsconfig-paths/register src/bin/route-list.ts"
   },
   "dependencies": {
-    "@faker-js/faker": "^6.2.0",
+    "@faker-js/faker": "^7.5.0",
     "app-root-path": "^3.0.0",
     "axios": "^0.27.2",
     "body-parser": "^1.19.1",
